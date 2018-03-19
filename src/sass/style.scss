@@ -1,0 +1,321 @@
+@import "variables";
+
+.element-invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+}
+html{
+  font-family: $font;
+}
+
+.wrapper{
+  font-family: $font;
+  z-index: 2;
+  width: 100%;
+  height: 9rem;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1rem;
+  background-color: white;
+  position: fixed;
+  transition: 0.5s ease-in-out;
+
+  //position: fixed;
+  .navbar-logo{
+    padding: 1rem;
+    z-index: 4;
+    img {
+      height: 4.5rem;
+    }
+  }
+  //btn menu style
+  #navbar-btn {
+    width: 3rem;
+    height: 3rem;
+    margin-top: 2rem;
+    margin-left: 14rem;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    z-index: 4;
+
+
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    span{
+    position: absolute;
+    height: 0.5rem;
+    width: 100%;
+    background: $textcolor;
+    border-radius: 0.9rem;
+    opacity: 1;
+    left: 0;
+
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+
+    &:nth-child(1){top: .0rem;}
+    &:nth-child(2){top: 1rem;}
+    &:nth-child(3){top: 1rem;}
+    &:nth-child(4){top: 2rem;}
+
+
+    &.open:nth-child(1){
+      top: 1.8rem;
+      width: 0%;
+      left: 50%;
+    }
+    &.open:nth-child(2){
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+    &.open:nth-child(3){
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+    &.open:nth-child(4){
+      top: 1.8rem;
+      width: 0%;
+      left: 50%;}
+  }
+  }
+  .navbar-menu{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    top: -20rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .5s ease-in-out;
+    li{
+      padding: 1rem;
+      text-align: center;
+      background: $bgcolor;
+      a{
+        font-size: 2rem;
+        color: $textcolor;
+        text-decoration: none;
+      }
+    }
+  }
+  .navbar-menu--open{
+    top: 8rem;
+  }
+  .navbar-phone{
+    display: none;
+  }
+
+}
+.wrapper--scroll{
+  height: 7rem;
+  box-shadow: 0rem 0rem 1rem 0rem rgba(0,0,0,0.3);
+}
+
+.wrapper-linie {
+  display: flex;
+  //top: 5rem;
+  height: 60rem;
+  position: relative;
+  justify-content: center;
+  .line {
+    margin: 5%;
+    min-width: 20%;
+    min-height: 90%;
+    border-right: 1px solid $line-color;
+    z-index: -2;
+    transform: translateX(-50%);
+  }
+}
+
+.ot2s {
+    img {
+      top: 10rem;
+      position: absolute;
+      transform: scale(0.4);
+    }
+    h2 {
+      position: absolute;
+      padding: 2rem;
+      top: 28rem;
+      font-size: 3rem;
+      text-align: center;
+    }
+  }
+
+.services-container {
+  display: flex;
+  flex-direction: column;
+  .services-element {
+    width: 100vw;
+    height: 35rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    -webkit-filter: brightness(100%);
+    &:nth-child(1){
+      background-image: url("../img/DiditalSignage.png");
+    }
+    &:nth-child(2){
+      background-image: url("../img/okablowanie.png");
+    }
+    &:nth-child(3){
+      background-image: url("../img/OutsourcingIT.png");
+    }
+
+    &:after{
+      content: '';
+      position: absolute;
+      left: 4rem;
+      top: 19rem;
+      width: 24rem;
+      margin: 0 auto;
+      border: 0.5px solid $bgcolor;
+    }
+
+    &:hover{
+      background-color: black;
+      opacity: 0.7;
+    }
+    &:active{
+      -webkit-filter: brightness(50%);
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+    }
+
+    .service-element-title{
+      position: relative;
+      z-index: 3;
+      color: $bgcolor;
+      font-size: 3rem;
+      letter-spacing: 0.2rem;
+      text-align: center;
+      top: 60%;
+    }
+  }
+
+}
+
+.about-company-container,.take-care-container{
+  h3{
+    position: absolute;
+    font-weight: 400;
+    top:5rem;
+    left: 3rem;
+    font-size: 4rem;
+  }
+  p{
+    position: absolute;
+    top:30rem;
+    transform: translateY(-50%);
+    padding: 3rem;
+    margin: 0 auto;
+    text-align: justify;
+    font-size: 2rem;
+    line-height: 3rem;
+    span{
+      font-weight: bold;
+    }
+  }
+}
+
+.numerical-data-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & > *{
+    border: 1px solid $textcolor;
+    width: 100%;
+    text-align: center;
+    height: 30rem;
+
+    .numerical-data-number{
+      display: block;
+      padding-top: 4rem;
+      font-size: 8rem;
+      font-weight: bold;
+    }
+    .numerical-data-unit{
+      padding-top: 1.5rem;
+      font-size: 1.7rem;
+    }
+    .numerical-data-description{
+      padding-top: 2rem;
+      font-size: 3rem;
+      letter-spacing: 0.3rem;
+      line-height: 5rem;
+    }
+  }
+  .numerical-data-reaction{
+    height: 55rem;
+    color: $bgcolor;
+    background-color: #424242;
+    .numerical-data-number{
+      display: block;
+      padding-top: 10rem;
+      font-size: 18rem;
+      font-weight: bold;
+    }
+    .numerical-data-unit{
+      padding-top: 5rem;
+      font-size: 1.5rem;
+    }
+    .numerical-data-description{
+      padding-top: 2rem;
+      font-size: 3rem;
+      letter-spacing: 0.3rem;
+      line-height: 5rem;
+    }
+  }
+  .numerical-data-recommendation{
+    color: $bgcolor;
+    background-color: #424242;
+  }
+
+}
+
+.take-care-container {
+  p{
+    top:28rem;
+    text-align: left;
+  }
+  .take-care-description{
+    font-size: 2.3rem;
+    display: block;
+    font-weight: 400;
+    padding: 3rem 0 3rem 0;
+  }
+  .take-care-span{
+    float: left;
+    font-weight: 400;
+  }
+  .take-care-span__border{
+    border: 1px solid black;
+    margin: 1rem;
+    padding: 0.3rem;
+    width: 90%;
+    text-align: center;
+  }
+
+}
