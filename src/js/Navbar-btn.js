@@ -12,7 +12,7 @@ btn.addEventListener('click',openMenu, false);
 // Scroll effect
 window.onscroll = function() {myFunction()};
 const navbar = document.getElementById('navbar');
-const whenStart=navbar.offsetHeight;
+const whenStart = navbar.offsetHeight;
 console.log(whenStart);
 function myFunction() {
     if (window.pageYOffset >= whenStart) {

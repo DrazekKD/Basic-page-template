@@ -1,13 +1,13 @@
 @import "variables";
 
+
+html{
+  font-family: $font;
+}
 .element-invisible {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
 }
-html{
-  font-family: $font;
-}
-
 .wrapper{
   font-family: $font;
   z-index: 2;
@@ -51,69 +51,76 @@ html{
     transition: .5s ease-in-out;
     cursor: pointer;
     span{
-    position: absolute;
-    height: 0.5rem;
-    width: 100%;
-    background: $textcolor;
-    border-radius: 0.9rem;
-    opacity: 1;
-    left: 0;
+      position: absolute;
+      height: 0.5rem;
+      width: 100%;
+      background: $textcolor;
+      border-radius: 0.9rem;
+      opacity: 1;
+      left: 0;
 
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: .25s ease-in-out;
-    -moz-transition: .25s ease-in-out;
-    -o-transition: .25s ease-in-out;
-    transition: .25s ease-in-out;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: .25s ease-in-out;
+      -moz-transition: .25s ease-in-out;
+      -o-transition: .25s ease-in-out;
+      transition: .25s ease-in-out;
 
-    &:nth-child(1){top: .0rem;}
-    &:nth-child(2){top: 1rem;}
-    &:nth-child(3){top: 1rem;}
-    &:nth-child(4){top: 2rem;}
+      &:nth-child(1){top: .0rem;}
+      &:nth-child(2){top: 1rem;}
+      &:nth-child(3){top: 1rem;}
+      &:nth-child(4){top: 2rem;}
 
 
-    &.open:nth-child(1){
-      top: 1.8rem;
-      width: 0%;
-      left: 50%;
+      &.open:nth-child(1){
+        top: 1.8rem;
+        width: 0%;
+        left: 50%;
+      }
+      &.open:nth-child(2){
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      &.open:nth-child(3){
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+      &.open:nth-child(4){
+        top: 1.8rem;
+        width: 0%;
+        left: 50%;}
     }
-    &.open:nth-child(2){
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      transform: rotate(45deg);
-    }
-    &.open:nth-child(3){
-      -webkit-transform: rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      -o-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-    }
-    &.open:nth-child(4){
-      top: 1.8rem;
-      width: 0%;
-      left: 50%;}
-  }
   }
   .navbar-menu{
     display: block;
     position: absolute;
     width: 100%;
     height: 70%;
-    top: -20rem;
+    top: -31rem;
     left: 50%;
     transform: translateX(-50%);
     transition: .5s ease-in-out;
     li{
-      padding: 1rem;
+      padding: 2rem;
       text-align: center;
       background: $bgcolor;
       a{
         font-size: 2rem;
         color: $textcolor;
         text-decoration: none;
+      }
+      &:last-child{
+        box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.3);
+      }
+      &:hover{
+        font-weight: bold;
+        text-shadow: 0.1px 0.1px 0.9px #000000;
       }
     }
   }
@@ -129,7 +136,6 @@ html{
   height: 7rem;
   box-shadow: 0rem 0rem 1rem 0rem rgba(0,0,0,0.3);
 }
-
 .wrapper-linie {
   display: flex;
   //top: 5rem;
@@ -165,12 +171,12 @@ html{
   display: flex;
   flex-direction: column;
   .services-element {
-    width: 100vw;
     height: 35rem;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
     -webkit-filter: brightness(100%);
+
     &:nth-child(1){
       background-image: url("../img/DiditalSignage.png");
     }
@@ -181,15 +187,15 @@ html{
       background-image: url("../img/OutsourcingIT.png");
     }
 
-    &:after{
-      content: '';
-      position: absolute;
-      left: 4rem;
-      top: 19rem;
-      width: 24rem;
-      margin: 0 auto;
-      border: 0.5px solid $bgcolor;
-    }
+    //&:after{
+    //  content: '';
+    //  position: absolute;
+    //  left: 4rem;
+    //  top: 19rem;
+    //  width: 24rem;
+    //  margin: 0 auto;
+    //  border: 0.5px solid $bgcolor;
+    //}
 
     &:hover{
       background-color: black;
@@ -211,7 +217,13 @@ html{
       font-size: 3rem;
       letter-spacing: 0.2rem;
       text-align: center;
-      top: 60%;
+      top: 50%;
+    }
+    p{
+      border-top:1px solid white;
+      margin: 0 auto;
+      width: 90%;
+      padding-top: 1.5rem;
     }
   }
 
@@ -246,7 +258,7 @@ html{
   align-items: center;
   & > *{
     border: 1px solid $textcolor;
-    width: 100%;
+    width: 99%;
     text-align: center;
     height: 30rem;
 
@@ -318,4 +330,46 @@ html{
     text-align: center;
   }
 
+}
+
+.footer-container{
+  background: $textcolor;
+  display: flex;
+  flex-direction: column;
+  color: $bgcolor;
+  .footer-contact,.footer-menu{
+    font-size: 2rem;
+    padding: 1rem;
+    a{
+      color: $bgcolor;
+      text-decoration: none;
+    }
+  }
+  .footer-contact{
+    display: flex;
+    flex-direction: column;
+    a{
+      margin-top: 1rem;
+    }
+  }
+  .footer-menu{
+    li{
+      margin-top: 1rem;
+
+    }
+    li:hover{
+      text-decoration: underline;
+
+    }
+  }
+  .footer-rule{
+    padding: 1rem;
+    font-size: 1.5rem;
+    p{
+      margin: 0.8rem 0 0.5rem 0;
+    }
+    img{
+      vertical-align:middle;
+    }
+  }
 }
