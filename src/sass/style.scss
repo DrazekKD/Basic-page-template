@@ -6,7 +6,7 @@ html{
 }
 .element-invisible {
   position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
+  clip: rect(.1rem .1rem .1rem .1rem);
 }
 .wrapper{
   font-family: $font;
@@ -14,11 +14,11 @@ html{
   width: 100%;
   height: 9rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding-top: 1rem;
   background-color: white;
   position: fixed;
-  transition: 0.5s ease-in-out;
+  transition: .5s ease-in-out;
 
   //position: fixed;
   .navbar-logo{
@@ -33,7 +33,7 @@ html{
     width: 3rem;
     height: 3rem;
     margin-top: 2rem;
-    margin-left: 14rem;
+    margin-right: -12rem;
     background-color: transparent;
     border: none;
     box-shadow: none;
@@ -97,30 +97,31 @@ html{
         left: 50%;}
     }
   }
-  .navbar-menu{
-    display: block;
+  .navbar-menu {
     position: absolute;
     width: 100%;
     height: 70%;
-    top: -31rem;
+    top: -80rem;
     left: 50%;
     transform: translateX(-50%);
     transition: .5s ease-in-out;
     li{
-      padding: 2rem;
+      padding: 2.3rem;
       text-align: center;
       background: $bgcolor;
+      margin: 0;
+      border: 1px solid white;
       a{
         font-size: 2rem;
         color: $textcolor;
         text-decoration: none;
       }
       &:last-child{
-        box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+        box-shadow: 0rem .5rem .5rem 0rem rgba(0,0,0,0.3);
       }
       &:hover{
-        font-weight: bold;
-        text-shadow: 0.1px 0.1px 0.9px #000000;
+        color: #000000;
+        text-shadow: 0.01rem 0.01rem 0.09rem #000000;
       }
     }
   }
@@ -146,7 +147,7 @@ html{
     margin: 5%;
     min-width: 20%;
     min-height: 90%;
-    border-right: 1px solid $line-color;
+    border-right: .1rem solid $line-color;
     z-index: -2;
     transform: translateX(-50%);
   }
@@ -154,14 +155,14 @@ html{
 
 .ot2s {
     img {
-      top: 10rem;
+      top: 17rem;
       position: absolute;
-      transform: scale(0.4);
+      height: 13rem;
     }
     h2 {
       position: absolute;
       padding: 2rem;
-      top: 28rem;
+      top: 31rem;
       font-size: 3rem;
       text-align: center;
     }
@@ -220,7 +221,7 @@ html{
       top: 50%;
     }
     p{
-      border-top:1px solid white;
+      border-top:.1rem solid white;
       margin: 0 auto;
       width: 90%;
       padding-top: 1.5rem;
@@ -257,7 +258,7 @@ html{
   flex-direction: column;
   align-items: center;
   & > *{
-    border: 1px solid $textcolor;
+    border: .1rem solid $textcolor;
     width: 99%;
     text-align: center;
     height: 30rem;
@@ -323,7 +324,7 @@ html{
     font-weight: 400;
   }
   .take-care-span__border{
-    border: 1px solid black;
+    border: .1rem solid black;
     margin: 1rem;
     padding: 0.3rem;
     width: 90%;
