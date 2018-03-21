@@ -139,7 +139,6 @@ html{
 }
 .wrapper-linie {
   display: flex;
-  //top: 5rem;
   height: 60rem;
   position: relative;
   justify-content: center;
@@ -254,12 +253,13 @@ html{
   display: flex;
   flex-direction: column;
   align-items: center;
-  & > *{
+  .numerical-data-first-square,.numerical-data-second-square{
+    width: 100%;
+  }
+  .numerical-data-first-square > *,.numerical-data-second-square-line > *{
     border: .1rem solid $textcolor;
-    width: 99%;
     text-align: center;
     height: 30rem;
-
     .numerical-data-number{
       display: block;
       padding-top: 4rem;
@@ -326,6 +326,7 @@ html{
     padding: 0.3rem;
     width: 90%;
     text-align: center;
+    font-weight: bold;
   }
 
 }
