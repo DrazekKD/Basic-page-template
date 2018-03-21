@@ -152,7 +152,9 @@ html{
     transform: translateX(-50%);
   }
 }
-
+.rectangle-wrapper{
+  display: none;
+}
 .ot2s {
     img {
       top: 17rem;
@@ -171,32 +173,27 @@ html{
 .services-container {
   display: flex;
   flex-direction: column;
+
   .services-element {
     height: 35rem;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
     -webkit-filter: brightness(100%);
-
     &:nth-child(1){
-      background-image: url("../img/DiditalSignage.png");
+      display: none;
+      background-color: $textcolor;
+
     }
     &:nth-child(2){
-      background-image: url("../img/okablowanie.png");
+      background-image: url("../img/DiditalSignage.png");
     }
     &:nth-child(3){
+      background-image: url("../img/okablowanie.png");
+    }
+    &:nth-child(4){
       background-image: url("../img/OutsourcingIT.png");
     }
-
-    //&:after{
-    //  content: '';
-    //  position: absolute;
-    //  left: 4rem;
-    //  top: 19rem;
-    //  width: 24rem;
-    //  margin: 0 auto;
-    //  border: 0.5px solid $bgcolor;
-    //}
 
     &:hover{
       background-color: black;

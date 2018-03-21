@@ -72,6 +72,58 @@
 }
 
 @media (min-width: 820px) {
+  .rectangle-wrapper {
+    position: relative;
+    display: block;
+    .rectangle-number {
+      position: absolute;
+      font-size: 1.5rem;
+      margin-top: -2rem;
+      margin-left: 6rem;
+    }
+    .rectangle-title {
+      border: none;
+      margin-top: 4rem;
+      margin-left: 5.6rem;
+      font-size: 2.7rem;
+    }
+    .rectangle-line {
+      z-index: -2;
+      height: 15rem;
+      margin-left: 6.3rem;
+      margin-top: 2rem;
+      position: relative;
+    }
+    .rectangle-description {
+      position: absolute;
+      text-transform: uppercase;
+      transform: rotate(-90deg);
+      margin-top: 20rem;
+      margin-left: -2.2rem;
+    }
+  }
+  .ot2s{
+    display: flex;
+    padding: 0;
+    .rectangle-wrapper{
+      width: 25vw;
+      .rectangle-number{
+        color: $textcolor;
+        margin-top:15rem;
+      }
+      .rectangle-line{
+        margin-top: 13rem;
+      }
+      .rectangle-description{
+        margin-top: 47rem;
+        margin-left: -1.8rem;
+      }
+    }
+    .wrapper-linie{
+      width: 55vw;
+      padding-right: 20vw;
+    }
+  }
   .wrapper {
     justify-content: space-around;
     #navbar-btn {
@@ -122,6 +174,65 @@
   }
   .wrapper-linie{
     height: 70rem;
+  }
+  .services-container{
+    flex-direction: row;
+    .services-element{
+      width: 25vw;
+      .service-element-title{
+        font-size: 1.5rem;
+      }
+      p{
+        width: 60%;
+      }
+      &:nth-child(1){
+        display: block;
+        color: $bgcolor;
+        p{
+          border: none;
+          margin-top: 4rem;
+          margin-left: 5.6rem;
+          font-size: 2.7rem;
+        }
+        &:hover{
+          background-color: $textcolor;;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .about-company-container{
+    display: flex;
+    justify-content: space-between;
+    .rectangle-wrapper{
+      padding-top:10rem ;
+      width: 25vw;
+      .rectangle-number{
+        margin-top: 3rem;
+      }
+      .rectangle-title{
+        color: $textcolor;
+        margin-top: -12rem;
+        margin-left: 2.3rem;
+      }
+      .rectangle-line{
+        margin-top: 10rem;
+      }
+      .rectangle-description{
+        margin-top: 30rem;
+        margin-left: -4.2rem;
+      }
+    }
+    .wrapper-linie{
+      width: 75vw;
+      height: 60rem;
+      h3{
+        display: none;
+      }
+      p{
+        padding: 0 7rem 0 7rem;
+      }
+    }
   }
 }
 
