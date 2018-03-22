@@ -1,13 +1,30 @@
 @import "variables";
-
-
 html{
   font-family: $font;
 }
+//Go to contents links
 .element-invisible {
-  position: absolute !important;
-  clip: rect(.1rem .1rem .1rem .1rem);
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+  &:focus{
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+  }
 }
+
+//NavBar Styles
 .wrapper{
   font-family: $font;
   z-index: 2;
@@ -19,16 +36,13 @@ html{
   background-color: white;
   position: fixed;
   transition: .5s ease-in-out;
-
-  //position: fixed;
   .navbar-logo{
     padding: 1rem;
-    z-index: 4;
+    z-index: 3;
     img {
       height: 4.5rem;
     }
   }
-  //btn menu style
   #navbar-btn {
     width: 3rem;
     height: 3rem;
@@ -38,7 +52,7 @@ html{
     border: none;
     box-shadow: none;
     outline: none;
-    z-index: 4;
+    z-index: 3;
 
 
     -webkit-transform: rotate(0deg);
@@ -131,12 +145,13 @@ html{
   .navbar-phone{
     display: none;
   }
-
 }
 .wrapper--scroll{
   height: 7rem;
   box-shadow: 0rem 0rem 1rem 0rem rgba(0,0,0,0.3);
 }
+
+//Background line
 .wrapper-linie {
   display: flex;
   height: 60rem;
@@ -168,7 +183,6 @@ html{
       text-align: center;
     }
   }
-
 .services-container {
   display: flex;
   flex-direction: column;
@@ -179,10 +193,10 @@ html{
     background-repeat: no-repeat;
     position: relative;
     -webkit-filter: brightness(100%);
+
     &:nth-child(1){
       display: none;
       background-color: $textcolor;
-
     }
     &:nth-child(2){
       background-image: url("../img/DiditalSignage.png");
@@ -225,7 +239,6 @@ html{
   }
 
 }
-
 .about-company-container,.take-care-container{
   h3{
     position: absolute;
@@ -248,7 +261,6 @@ html{
     }
   }
 }
-
 .numerical-data-container {
   display: flex;
   flex-direction: column;
@@ -304,7 +316,6 @@ html{
   }
 
 }
-
 .take-care-container {
   p{
     top:28rem;
@@ -330,7 +341,6 @@ html{
   }
 
 }
-
 .footer-container{
   background: $textcolor;
   display: flex;
