@@ -10,11 +10,10 @@ function openMenu() {
 btn.addEventListener('click',openMenu, false);
 
 // Scroll effect
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {showEffects()};
 const navbar = document.getElementById('navbar');
 const whenStart = navbar.offsetHeight;
-console.log(whenStart);
-function myFunction() {
+function showEffects() {
     if (window.pageYOffset >= whenStart) {
         navbar.classList.add("wrapper--scroll");
     } else {
