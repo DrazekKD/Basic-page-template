@@ -156,7 +156,7 @@ html{
   display: flex;
   position: relative;
   justify-content: center;
-  height: 70vh;
+  height: 60vh;
   .line {
     margin: 5%;
     min-width: 20%;
@@ -169,7 +169,7 @@ html{
 .title{
   position: absolute;
   padding: 2rem;
-  top: 20rem;
+  top: 15rem;
   font-size: 3rem;
   text-align: center;
 }
@@ -260,6 +260,8 @@ html{
         h2 {
           margin: 0;
           font-size: 2rem;
+          line-height: 3rem;
+          letter-spacing: 0.1rem;
           position: revert;
           z-index: 1;
           padding: 1rem;
@@ -281,7 +283,28 @@ html{
       }
     }
   }
-#dupa{
-  min-height: 200vh;
+.warranty-container{
+  .warranty-text{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    min-height: 100vh;
+    h2{
+      text-align: left;
+      padding: 1rem;
+      top: 2rem;
+    }
+    ul{
+      margin-top: 10rem;
+      list-style-type: disc;
+      padding: 4rem;
+      font-size: 2rem;
+      margin-left: 2rem;
+      li{
+        padding-bottom:1rem ;
+        line-height: 2.4rem;
+      }
+    }
+  }
 }
 
