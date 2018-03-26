@@ -173,116 +173,116 @@ html{
   font-size: 3rem;
   text-align: center;
 }
-.services-container{
+.accordion-container{
+
+  .accordion-wrapper {
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    flex-direction:column;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
-    .services-element {
-      max-height: 35vh;
-      flex: 1;
-      display: flex;
-      align-items: stretch;
-      cursor: pointer;
-      transition: all .5s ease;
-      width: 100%;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      &:nth-child(1){
-        background-image: url("../img/services1.png");
-      }
-      &:nth-child(2){
-        background-image: url("../img/services2.png");
-      }
-      &:nth-child(3){
-        background-image: url("../img/services3.png");
-      }
-      &:nth-child(4){
-        background-image: url("../img/services4.png");
-      }
+    list-style-type: none;
+  }
+
+  .accordion-elements {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    min-height: 35vh;
+    color: white;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    &:nth-child(1){
+      background-image: url("../img/services1.png");
+    }
+    &:nth-child(2){
+      background-image: url("../img/services2.png");
+    }
+    &:nth-child(3){
+      background-image: url("../img/services3.png");
+    }
+    &:nth-child(4){
+      background-image: url("../img/services4.png");
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &.active {
+      flex: 5;
+      min-height: 100rem;
+      background: $textcolor;
+      cursor: default;
+      font-size: 1.7rem;
       &:hover {
-        opacity: 0.9;
+        opacity: 1;
       }
-
-      &.active {
-        flex: 5;
-        background: $textcolor;
-        cursor: default;
-        transition: all 1s 0s ease-out;
-        min-height: 100rem;
-        font-size: 1.6rem;
-        h2 {
-          color: $bgcolor;
-          position: relative;
-          margin: 0 0 2rem 0;
-          &:after{
-            content: '';
-            position: absolute;
-            bottom:2.2em;
-            left: 0;
-            height: 0.1rem;
-            width: 15rem;
-            border-top: 0.1rem solid white;
-          }
-        }
-        p{
-          line-height: 2rem;
-          margin: 1rem 0 1rem 0;
-        }
-        ul{
-          list-style-type: disc;
-          padding: 2rem;
-          li{
-            margin: 1rem;
-          }
-        }
-        .section-content {
-          flex: 4;
-          opacity: 1;
-          transform: scaleX(1);
-          color: $bgcolor;
-          box-sizing: border-box;
-          padding: 2rem;
-
-        }
-        .section-title {
-          display: none;
-        }
+      .section-title{
+        display: none;
       }
-
-      .section-title {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        color: white;
-
-        h2 {
-          margin: 0;
-          font-size: 2rem;
-          line-height: 3rem;
-          letter-spacing: 0.1rem;
-          position: revert;
-          z-index: 1;
-          padding: 1rem;
+      h2 {
+        color: $bgcolor;
+        position: relative;
+        margin: 3rem 1rem 2rem 1rem;
+        &:after{
+          content: '';
+          position: absolute;
+          bottom:2.2em;
+          left: 0;
+          height: 0.1rem;
+          width: 15rem;
           border-top: 0.1rem solid white;
-          width: 70vw;
-          text-align: left;
+        }
+      }
+      p{
+        line-height: 2rem;
+        margin: 1rem 1.5rem 1rem 1.5rem;
+      }
+      ul{
+        list-style-type: disc;
+        padding: 1rem 3rem 1rem 4rem ;
+        li{
+          margin: 0.5rem;
         }
       }
 
       .section-content {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0 auto;
-        padding: 0;
-        opacity: 0;
-        //transition: all .25s .1s ease-out;
+        flex: 4;
+        opacity: 1;
+        transform: scaleX(1);
       }
     }
+
+    .section-title {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: white;
+
+      h2 {
+        margin: 0 0 0 2rem;
+        font-size: 2rem;
+        line-height: 3rem;
+        letter-spacing: 0.1rem;
+        text-align: left;
+        border-top: 1px solid white;
+      }
+    }
+
+    .section-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      opacity: 0;
+      //transition: all .25s .1s ease-out;
+    }
   }
+}
 .warranty-container{
   .warranty-text{
     display: flex;
