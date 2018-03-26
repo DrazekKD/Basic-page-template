@@ -156,7 +156,7 @@ html{
   display: flex;
   position: relative;
   justify-content: center;
-  height: 70vh;
+  height: 65vh;
   .line {
     margin: 5%;
     min-width: 20%;
@@ -214,7 +214,7 @@ html{
         h2 {
           color: $bgcolor;
           position: relative;
-          margin-bottom: 2rem;
+          margin: 0 0 2rem 0;
           &:after{
             content: '';
             position: absolute;
@@ -314,16 +314,18 @@ html{
   p{
     font-size: 2rem;
     text-align: center;
-    padding: 2rem 1rem 0rem 1rem;
+    padding: 2rem 1rem 3rem 1rem;
     line-height: 2.5rem;
   }
   .check-elements{
     display: flex;
     flex-direction: column;
-    padding: 4rem;
+    padding-bottom: 3rem;
     .check-element{
-      margin: 1.5rem;
+      margin: 1rem auto;
       min-height: 30rem;
+      min-width: 30rem;
+      max-width: 30rem;
       color: $textcolor;
       background-repeat: no-repeat;
       &:nth-child(1){
@@ -336,7 +338,7 @@ html{
         background-image: url("../img/opiekun.png");
       }
       p{
-        margin-top: 80%;
+        margin: 20rem 0 0 0;
         font-weight: 700;
         text-align: left;
       }
