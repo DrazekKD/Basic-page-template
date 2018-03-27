@@ -120,7 +120,7 @@ html{
     transform: translateX(-50%);
     transition: .5s ease-in-out;
     li{
-      padding: 2.3rem;
+      padding: 1.5rem;
       text-align: center;
       background: $bgcolor;
       margin: 0;
@@ -130,6 +130,7 @@ html{
         color: $textcolor;
         text-decoration: none;
       }
+      &:nth-child(2){font-weight: 700}
       &:last-child{
         box-shadow: 0rem .5rem .5rem 0rem rgba(0,0,0,0.3);
       }
@@ -276,7 +277,8 @@ html{
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 0;
+      max-width: 70rem;
+      margin: 0 auto;
       padding: 0;
       opacity: 0;
       //transition: all .25s .1s ease-out;
@@ -285,8 +287,6 @@ html{
 }
 .warranty-container{
   .warranty-text{
-    display: flex;
-    flex-direction: column;
     position: absolute;
     h2{
       margin-left: 1rem;
@@ -322,10 +322,10 @@ html{
     flex-direction: column;
     padding-bottom: 3rem;
     .check-element{
-      margin: 1rem auto;
+      margin: 3rem auto;
       min-height: 30rem;
-      min-width: 30rem;
-      max-width: 30rem;
+      min-width: 20rem;
+      max-width: 20rem;
       color: $textcolor;
       background-repeat: no-repeat;
       &:nth-child(1){
