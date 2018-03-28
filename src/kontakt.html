@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Podstona</title>
+    <link rel="stylesheet" href="./css/reset-global.css">
+    <link rel="stylesheet" href="./css/style-kontakt.css" >
+</head>
+<body id="closeDescription">
+    <header>
+        <a href="#tresc" class="element-invisible">Przejdź do treści</a>
+        <div class="wrapper" id="navbar">
+            <div class="navbar-logo">
+                <img src="./img/Nabbar-Logo.png" alt="">
+            </div>
+            <button type="button" id="navbar-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <div class="navbar-menu" id="navbar-menu">
+                    <ul>
+                        <li><a href="index.html">O firmie</a></li>
+                        <li><a href="podstrona.html">Outsourcing IT</a></li>
+                        <li><a href="#okablowanie">Okablowanie</a></li>
+                        <li><a href="#digital-signage">Digital Signage</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="navbar-phone">
+                <a href="tel:12 560 780 456"><img src="./img/phone-black.png" alt="">12 560 780 456</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper-linie" id="topOffset">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <h1 class="title">Kontakt</h1>
+        </div>
+        <div class="form-container">
+            <div class="form-information">
+                <h2 class="form-information-title">Skontaktuj się z nami i zadbaj o bezpieczeństwo swojej firmy</h2>
+                <div class="form-contact">
+                  <a href="tel:798970567"><img src="./img/phone.png" alt="">798 970 567</a>
+                  <a href="mailto:adres@mail.com"><img src="./img/Email.png" alt="">adres@mail.com</a>
+                  <a href="https://www.google.pl/maps/place/OT2S+Sp.+z+o.o./@50.0187689,19.885032,13z/data=!4m8!1m2!2m1!1sot2s!3m4!1s0x0:0x42e70c28a53d5a47!8m2!3d49.9904219!4d19.9089646?hl=pl">
+                    <img src="./img/map.png" alt="">
+                    <div>
+                        <span>ul.Siedziba ot2s 2/5 </span> <span>32-404 Kraków</span>
+                    </div>
+                  </a>
+                </div>
+            </div>
+            <div class="form-wrapper">
+                <form action="" method="post">
+                    <div class="form-data">
+                        <p>
+                           <input type="text" name="first-name" id="contact-first-name" required>
+                           <label for="contact-first-name">Imię</label>
+                        </p>
+                        <p>
+                            <input type="text" name="surname" id="contact-surname" required>
+                            <label for="contact-surname">Nazwisko</label>
+                        </p>
+                    </div>
+                    <div class="form-data">
+                        <p>
+                            <input type="tel" name="phone" id="contact-phone"  required>
+                            <label for="contact-phone">Telefon</label>
+                        </p>
+                        <p>
+                            <input type="email" name="email" id="contact-email" required>
+                            <label for="contact-email">Email</label>
+                        </p>
+                    </div>
+                    <div class="form-area">
+                        <p>
+                            <textarea name="text" id="text" cols="40" rows="4" required></textarea>
+                            <label for="contact-text">Treść wiadomości</label>
+                        </p>
+                        <p>
+                            <button name="submit" type="submit" id="contact-submit">Wyślij ></button>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="map"></div>
+    </main>
+      <footer class="footer-container">
+        <div class="footer-contact">
+            <a href="tel:12560780456"><img src="./img/phone.png" alt=""> 12 560 780 456</a>
+            <a href="mailto:adres@mail.com"><img src="./img/Email.png" alt=""> adres@mail.com</a>
+        </div>
+        <nav>
+            <div class="footer-menu">
+                <ul>
+                    <li><a href="#o-firmie">O firmie</a></li>
+                    <li><a href="#outsourcing-it">Outsourcing IT</a></li>
+                    <li><a href="#okablowanie">Okablowanie</a></li>
+                    <li><a href="#digital-signage">Digital Signage</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="footer-rule">
+            <p>Wszelkie prawa zastrzeżone OT2S &#169; 2018</p>
+            <p>Proudly designed by <img src="./img/zensite-logo-blk.png" alt="Logo firmy Zensite"></p>
+        </div>
+      </footer>
+<script src="./js/Navbar-btn.js"></script>
+
+</body>
+</html>

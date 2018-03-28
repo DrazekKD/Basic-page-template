@@ -1,0 +1,326 @@
+@import "variables";
+html{
+  font-family: 'Montserrat', sans-serif;
+}
+//Go to contents links
+.element-invisible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+  &:focus{
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+  }
+}
+
+//NavBar Styles
+.wrapper{
+  //font-family: $font;
+  z-index: 2;
+  width: 100%;
+  height: 9rem;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  background-color: white;
+  position: fixed;
+  transition: .5s ease-in-out;
+  .navbar-logo{
+    padding: 1rem;
+    z-index: 3;
+    img {
+      height: 4.5rem;
+    }
+  }
+  #navbar-btn {
+    width: 3rem;
+    height: 3rem;
+    margin-top: 2rem;
+    margin-right: -12rem;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    z-index: 3;
+
+
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    span{
+      position: absolute;
+      height: 0.5rem;
+      width: 100%;
+      background: $textcolor;
+      border-radius: 0.9rem;
+      opacity: 1;
+      left: 0;
+
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: .25s ease-in-out;
+      -moz-transition: .25s ease-in-out;
+      -o-transition: .25s ease-in-out;
+      transition: .25s ease-in-out;
+
+      &:nth-child(1){top: .0rem;}
+      &:nth-child(2){top: 1rem;}
+      &:nth-child(3){top: 1rem;}
+      &:nth-child(4){top: 2rem;}
+
+
+      &.open:nth-child(1){
+        top: 1.8rem;
+        width: 0%;
+        left: 50%;
+      }
+      &.open:nth-child(2){
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      &.open:nth-child(3){
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+      &.open:nth-child(4){
+        top: 1.8rem;
+        width: 0%;
+        left: 50%;}
+    }
+  }
+  .navbar-menu {
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    top: -80rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .5s ease-in-out;
+    li{
+      padding: 1.5rem;
+      text-align: center;
+      background: $bgcolor;
+      margin: 0;
+      border: 1px solid white;
+      a{
+        font-size: 2rem;
+        color: $textcolor;
+        text-decoration: none;
+      }
+      &:nth-child(2){font-weight: 700}
+      &:last-child{
+        box-shadow: 0rem .5rem .5rem 0rem rgba(0,0,0,0.3);
+      }
+      &:hover{
+        color: #000000;
+        text-shadow: 0.01rem 0.01rem 0.09rem #000000;
+      }
+    }
+  }
+  .navbar-menu--open{
+    top: 8rem;
+  }
+  .navbar-phone{
+    display: none;
+  }
+}
+.wrapper--scroll{
+  height: 7rem;
+  box-shadow: 0rem 0rem 1rem 0rem rgba(0,0,0,0.3);
+}
+
+//Background line
+.wrapper-linie {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  height: 65vh;
+  .line {
+    margin: 5%;
+    min-width: 20%;
+    min-height: 90%;
+    border-right: .1rem solid $line-color;
+    z-index: -2;
+    transform: translateX(-50%);
+  }
+}
+.title{
+  position: absolute;
+  padding: 2rem;
+  top: 15rem;
+  font-size: 3rem;
+  text-align: center;
+}
+.form-container{
+  color: white;
+  background-color: $textcolor;
+  .form-information{
+
+    .form-information-title{
+      text-align: center;
+      font-size: 3rem;
+      padding: 2rem;
+      line-height: 3.5rem;
+    }
+    .form-contact{
+      display: flex;
+      flex-direction: column;
+      font-size: 2rem;
+
+      a{
+        max-width: 70vw;
+        margin: 0 auto;
+        padding: 1rem;
+        text-decoration: none;
+        color: white;
+        img{
+          vertical-align:bottom;
+          margin: 0 1rem 0 0;
+          max-height: 4rem;
+        }
+        &:last-child{
+          display: flex;
+          span{
+            display: block;
+            margin-top: 0.2rem;
+          }
+        }
+      }
+    }
+
+  }
+  .form-wrapper{
+
+    .form-data{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    label{
+      display: block;
+      position: absolute;
+      margin: -4.2rem 0 0 2.4rem;
+      font-size: 2rem;
+      pointer-events: none;
+    }
+
+    input,textarea{
+      outline: none;
+      height: 3rem;
+      width: 80vw;
+      background-color: $textcolor;
+      border: none;
+      border-bottom: 1px solid #646464;
+      margin: 1.5rem;
+      color: white;
+      font-size: 1.9rem;
+      transition: .5s ease-in-out;
+    }
+
+    input:focus,textarea:focus {
+      border: 1px solid #646464;
+    }
+
+    input:focus ~ label, textarea:focus ~ label,
+    input:valid ~ label, textarea:valid ~ label{
+      margin: -1rem 0 0 1.9rem;
+      font-size: 1.5rem;
+      transition: .5s ease-in-out;
+    }
+
+    .form-area{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      textarea{
+        height: 10rem;
+      }
+     button{
+       margin: 1rem 0 3rem 60vw ;
+        background: transparent;
+       border: none;
+       color: white;
+       font-size: 1.5rem;
+       font-weight: 700;
+       letter-spacing: 0.2rem;
+       padding: 1rem;
+       &:hover{
+         text-decoration: underline;
+       }
+     }
+
+    }
+
+  }
+}
+#map {
+  width: 100%;
+  height: 400px;
+  background-color: grey;
+}
+.footer-container{
+  background: #000000;
+  display: flex;
+  flex-direction: column;
+  color: $bgcolor;
+  .footer-contact,.footer-menu{
+    font-size: 2rem;
+    padding: 1rem;
+    a{
+      color: $bgcolor;
+      text-decoration: none;
+    }
+  }
+  .footer-contact{
+    display: flex;
+    flex-direction: column;
+    a{
+      margin-top: 1rem;
+    }
+  }
+  .footer-menu{
+    li{
+      margin-top: 1rem;
+
+    }
+    li:hover{
+      text-decoration: underline;
+
+    }
+  }
+  .footer-rule{
+    padding: 1rem;
+    font-size: 1.5rem;
+    p{
+      margin: 0.8rem 0 0.5rem 0;
+    }
+    img{
+      vertical-align:middle;
+    }
+  }
+}
