@@ -26,6 +26,11 @@
       margin-right: -18rem;
     }
   }
+  .warranty-container{
+    .wrapper-linie {
+      height: 120vh;
+    }
+  }
 }
 
 @media (min-width: 410px) and (orientation: portrait) {
@@ -49,8 +54,10 @@
       margin-right: -30rem;
     }
   }
-  .check-container {
-    margin-top: 23rem;
+  .warranty-container{
+    .wrapper-linie {
+      height: 100vh;
+    }
   }
 }
 @media (min-width: 474px) {
@@ -95,8 +102,10 @@
   }
   .warranty-container{
     .warranty-text{
+
       margin-top: 2rem;
       ul{
+        font-size: 2.5rem;
         margin-top: 7rem;
         li{
           padding-bottom:2rem ;
@@ -169,6 +178,7 @@
       display: block;
       padding-top: 2rem;
       a{
+        box-sizing: border-box;
         color: $textcolor;
         text-decoration: none;
         font-size: 1.3rem;
@@ -198,8 +208,35 @@
     justify-content: space-around;
   }
 }
+@media (min-width: 845px){
+  .wrapper {
+    .navbar-phone {
+        img {
+          vertical-align:middle;
+          margin-right: 1rem;
+        }
+    }
+  }
+}
 
 @media (min-width: 1020px) {
+  .warranty-container{
+    .warranty-text{
+      h2{
+        font-size: 5rem;
+        width: 30vw;
+      }
+      ul{
+        width: 50vw;
+        margin-top: 10vh;
+        margin-left: 35vw;
+        font-size: 2.5rem;
+        li{
+          line-height: 2.9rem;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 1280px) {
@@ -251,18 +288,47 @@
       min-width: 13vw;
     }
   }
-  .warranty-container{
-    .warranty-text{
-      h2{
-        width: 30vw;
+  .footer-container{
+    height: 20rem;
+    justify-content: space-between;
+    align-items: center;
+    color: $bgcolor;
+    .footer-contact,.footer-menu{
+      font-size: 2rem;
+      padding: 1rem;
+      a{
+        color: $bgcolor;
+        text-decoration: none;
       }
+    }
+    .footer-contact{
+      display: flex;
+      flex-direction: column;
+      a{
+        margin-top: 1rem;
+      }
+    }
+    .footer-menu{
       ul{
-        margin-top: 0;
-        margin-left: 30vw;
-        font-size: 2rem;
+        display: flex;
         li{
-          line-height: 2.9rem;
+          margin-top: 1rem;
+          padding: 1rem;
         }
+        li:hover{
+          text-decoration: underline;
+
+        }
+      }
+    }
+    .footer-rule{
+      padding: 1rem;
+      font-size: 1.5rem;
+      p{
+        margin: 0.8rem 0 0.5rem 0;
+      }
+      img{
+        vertical-align:middle;
       }
     }
   }

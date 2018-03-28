@@ -363,7 +363,17 @@
     justify-content: space-around;
   }
 }
+@media (min-width: 845px){
+  .wrapper {
 
+    .navbar-phone {
+      img {
+        vertical-align:middle;
+        margin-right: 1rem;
+      }
+    }
+  }
+}
 @media (min-width: 1020px) {
   .numerical-data-container {
     & > * {
