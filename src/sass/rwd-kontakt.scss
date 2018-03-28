@@ -1,0 +1,195 @@
+@import "variables";
+@media (min-width: 150px) and (orientation: portrait) {
+  html{
+    font-size: 4px;
+  }
+}
+
+@media (min-width: 220px) and (orientation: portrait) {
+  html{
+    font-size: 8.7px;
+  }
+}
+
+@media (min-width: 320px) and (orientation: portrait) {
+  html{
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 360px) and (orientation: portrait) {
+  html{
+    font-size: 10px;
+  }
+  .wrapper{
+    #navbar-btn{
+      margin-right: -18rem;
+    }
+  }
+}
+
+@media (min-width: 410px) and (orientation: portrait) {
+  .wrapper{
+    #navbar-btn{
+      margin-right: -23rem;
+    }
+  }
+}
+
+@media (min-width: 430px) {
+  .wrapper{
+    #navbar-btn{
+      margin-right: -30rem;
+    }
+  }
+}
+@media (min-width: 474px) {
+  .accordion-container{
+    .accordion-elements {
+      &.active {
+        min-height: 80vh;
+        h2 {
+          &:after{
+            bottom:1.2em;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (min-width: 530px) and (orientation: portrait) {
+  .wrapper{
+    #navbar-btn{
+      margin-right: -38rem;
+    }
+  }
+}
+
+@media (min-width: 630px) {
+  .wrapper{
+    #navbar-btn{
+      margin-right: -45rem;
+    }
+  }
+}
+
+@media (min-width: 720px) {
+  .wrapper{
+    #navbar-btn{
+      margin-right: -55rem;
+    }
+  }
+}
+
+@media (min-width: 820px) {
+  .wrapper {
+    justify-content: space-around;
+    #navbar-btn {
+      display: none;
+    }
+    .navbar-menu {
+      position: static;
+      transform: translateX(0);
+      transition: .5s ease-in-out;
+      li {
+        float: left;
+        display: block;
+        padding: 2rem 1rem 2rem 1rem;
+        text-align: center;
+        background: $bgcolor;
+        margin: 0;
+        border: 1px solid white;
+        a {
+          font-size: 1.6rem;
+          color: $textcolor;
+          text-decoration: none;
+        }
+        &:last-child {
+          box-shadow: none;
+        }
+        &:hover {
+          color: #000000;
+          text-shadow: 0.001rem 0.001rem 0.009rem #000000;
+        }
+      }
+    }
+    .navbar-phone {
+      display: block;
+      padding-top: 2rem;
+      a{
+        color: $textcolor;
+        text-decoration: none;
+        font-size: 1.3rem;
+        img {
+          vertical-align:middle;
+        }
+        &:hover{
+          color: #000000;
+          text-shadow: .001rem .001rem .009rem #000000;
+        }
+      }
+    }
+  }
+  .wrapper-linie{
+    height: 40rem;
+  }
+  .form-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    .form-information{
+      width: 30vw;
+      align-items: flex-start;
+      .form-information-title{
+        text-align: left;
+        font-size: 3.5rem;
+        line-height: 4rem;
+        margin: 0;
+        padding: 0 0 5rem 0;
+      }
+      .form-contact{
+        font-size: 2rem;
+      }
+    }
+
+    .form-wrapper{
+      .form-data{
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      input,textarea{
+        width: 20vw;
+      }
+
+      .form-area{
+        textarea{
+          width: 40vw;
+        }
+        button{
+          margin: 1rem 0 3rem 30vw ;
+        }
+      }
+
+    }
+  }
+  .footer-container{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 1020px) {
+}
+
+@media (min-width: 1280px) {
+}
+
+@media (min-width: 1500px) {
+  html{
+    font-size: 13px;
+  }
+}

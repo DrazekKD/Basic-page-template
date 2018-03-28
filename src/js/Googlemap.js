@@ -168,8 +168,6 @@ function initMap() {
 const icon = {
     url: "./img/Googlemapspic.png",
     scaledSize: new google.maps.Size(70, 70), // scaled size
-    origin: new google.maps.Point(0,0), // origin
-    anchor: new google.maps.Point(0, 0) // anchor
 };
  const marker = new google.maps.Marker({
  position: uluru,
@@ -177,9 +175,3 @@ const icon = {
  icon: icon
  });
 }
-
-
-// <script src="./js/Googlemap.js"></script>
-//     <script async defer
-// src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtk_O5_LESyN-TQvUI14Sux0ZXHpCFbXM&callback=initMap">
-//     </script>

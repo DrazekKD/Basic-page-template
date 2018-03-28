@@ -178,22 +178,26 @@ html{
   color: white;
   background-color: $textcolor;
   .form-information{
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .form-information-title{
       text-align: center;
       font-size: 3rem;
       padding: 2rem;
       line-height: 3.5rem;
+      max-width: 50rem;
+      margin: 0 auto;
     }
     .form-contact{
-      display: flex;
-      flex-direction: column;
+      margin: 2rem 0 2rem 0;
       font-size: 2rem;
 
       a{
+        display: block;
         max-width: 70vw;
-        margin: 0 auto;
-        padding: 1rem;
+        margin: 0 ;
+        padding: 1.5rem;
         text-decoration: none;
         color: white;
         img{
@@ -207,6 +211,9 @@ html{
             display: block;
             margin-top: 0.2rem;
           }
+        }
+        &:hover{
+          text-decoration: underline;
         }
       }
     }
