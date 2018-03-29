@@ -189,7 +189,6 @@ html{
     flex: 1;
     display: flex;
     align-items: stretch;
-    min-height: 35vh;
     color: white;
     cursor: pointer;
     background-repeat: no-repeat;
@@ -212,7 +211,6 @@ html{
 
     &.active {
       flex: 5;
-      min-height: 100rem;
       background: $textcolor;
       cursor: default;
       font-size: 1.7rem;

@@ -196,6 +196,10 @@
     height: 40rem;
   }
   .check-container{
+    p{
+      padding-left: 8rem;
+      padding-right: 8rem;
+    }
     .check-elements{
       .check-element{
         min-width: 25rem;
@@ -337,5 +341,16 @@
 @media (min-width: 1500px) {
   html{
     font-size: 13px;
+  }
+  .check-container{
+    .check-elements{
+      .check-element{
+        p{
+          margin: 13rem 0 0 0;
+        }
+
+
+      }
+    }
   }
 }
